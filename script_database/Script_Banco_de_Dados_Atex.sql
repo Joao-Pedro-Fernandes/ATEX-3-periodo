@@ -40,10 +40,10 @@ create table crianca_jogo_rede_social (
 );
 
 create table outro_jogo_rede_social (
-    id int auto_increment,
-    nome varchar(50)not null,
-    id_crianca int not null,
-    tipo varchar(11) not null,
-    primary key(id),
+    id_outro_jogo_rede_social int,
+    nome varchar(50),
+    tipo varchar(11),
+    id_crianca int,
+    primary key(id_outro_jogo_rede_social,id_crianca),
     foreign key(id_crianca) references crianca (id_crianca)
 );
