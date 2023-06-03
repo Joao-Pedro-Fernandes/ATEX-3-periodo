@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace prototipo
 {
-    public class Pessoa
+    abstract public class Pessoa
     {
+        public Pessoa(string nome)
+        {
+            Nome = nome;
+        }
+        public int Id { get; set; }
         public string Nome { get; set; }
     }
 }
